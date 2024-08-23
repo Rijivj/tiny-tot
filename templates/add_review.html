@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website Reviews</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .section-header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            margin: 0;
+        }
+
+        .reviews {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .review-form {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form h2 {
+            color: #333;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        form label {
+            display: block;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .review-list {
+            margin-top: 20px;
+        }
+
+        /* Optional: Style your reviews if needed */
+        .review-item {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-item p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<section id="reviews" class="reviews">
+    <div class="section-header">
+        <h2>Reviews</h2>
+        <p>Add your review about this website</p>
+    </div>
+
+    <div class="review-form">
+        <h2>Add a Review</h2>
+        <form method="post" action="{% url 'add_review' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Review</button>
+        </form>
+
+    </div>
+    {% if user.is_authenticated %}
+            {% if user.class1 == 'pre-kg' or user.class1 == 'lkg' or user.class1 == 'ukg' or user.class1 == '1' %}
+                <a href="{% url 'home1' %}">Back to Home</a>
+            {% elif user.class1 == '2' or user.class1 == '3' or user.class1 == '4' or user.class1 == '5' %}
+                <a href="{% url 'home2' %}">Back to Home</a>
+            {% endif %}
+        {% endif %}
+    </div>
+</section>
+
+</body>
+</html>

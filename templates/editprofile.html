@@ -1,0 +1,22 @@
+<!-- templates/editprofile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" value="{{ user_details.Name }}">
+        <br>
+        <label for="Class">Class:</label>
+        <input type="text" name="Class" value="{{ user_details.Class }}">
+        <br>
+        <input type="submit" value="Save Changes">
+    </form>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% load static %}                                                                                                                                                                 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Page</title>
+        <style>
+            select{
+                background-origin:
+                padding-box;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body background={% static '/images/background.png'%}>
+        
+        <div class="container">
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2>Register</h2>
+                <input type="text"  placeholder="Full Name" name="name" required>
+                <select id="class1" name="class1" class="class1" required>
+                    <option value="select">select your class</option>
+                    <option value="pre-kg">Pre-KG</option>
+                    <option value="lkg">LKG</option>
+                    <option value="ukg">UKG</option>
+                    <option value="1">1st Standard</option>
+                    <option value="2">2nd Standard</option>
+                    <option value="3">3rd Standard</option>
+                    <option value="4">4th Standard</option>
+                    <option value="5">5th Standard</option>
+                  </select>
+                <input type="text" placeholder="user name" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <input type="password" placeholder="conform password" name="conform" required>
+                <button type="submit">Register</button>
+            </form>
+          
+
+        </div>
+
+        
+        <style>
+            /* styles.css */
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+        </style>
+    </body>
+    </html>

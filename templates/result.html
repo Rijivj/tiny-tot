@@ -1,0 +1,62 @@
+<!-- templates/quiz/result.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        .back-to-home {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .back-to-home:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Results</h1>
+        <p>Your score: <span class="score">{{ score }}</span> </p>
+        <!-- You can customize the result page further based on your requirements -->
+        <a href="{% url 'quiz_view' %}" class="back-to-home">Back to Home</a>
+    </div>
+</body>
+</html>

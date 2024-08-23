@@ -1,0 +1,39 @@
+<!-- templates/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+<body>
+    {% for user in users %}
+    {{ user.username }}</a>
+ {% endfor %}     >                  
+
+    <h2>{{ user.username }}</h2>
+
+    <h2>User Profile</h2>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td>{{ user.name }}</td>
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td>{{ user.class1 }}</td>
+        </tr>
+        <tr>
+            <th>Date of Birth:</th>
+            <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+            <th>Address:</th>
+            <td>{{ user.address }}</td>
+        </tr>
+        <!-- Include any other profile details here -->
+    </table>
+    <a href="{% url 'login' %}">login</a>
+
+</body>
+</html>

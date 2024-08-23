@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>home page tiny tot</title>
+		<style>
+			 body{
+                
+                overflow-x: hidden;
+            }
+		</style>
+        <!--style.css-->
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    </head>
+	
+	<body class="body1">
+		<!-- top-area Start -->
+				<div class="head">
+		            <div class="logo">
+					
+					</div>
+						<div class="nav">
+			            <ul id="menu">
+			                    <li class=" scroll active"><a href="#home">home</a></li>
+			                    <li class="scroll"><a href="#works">how it works</a></li>
+			                    <li class="scroll"><a href="{% url 'display_reviews' %}">review</a></li>
+							
+			                </ul>
+			            </div>
+			        </div>
+			    <!-- End Navigation -->
+
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
+						<div class="welcome-hero-txt">
+					<h2>welcome to our website <br> <span>tiny tot </span></h2>
+					<p>
+						tips for your kids stay healthy! 
+					</p>
+				</div>
+				<h1>lets goo</h1>
+				<a href={% url 'login' %}>get started</a>
+					</div>
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+
+		<!--works start -->
+		<section id="works" class="works">
+			<div class="container">
+				<div class="section-header">
+					<h2>how it works</h2>
+					<p>Learn More about how our website works </p>
+				</div><!--/.section-header-->
+				<div class="works-content">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-how-works">
+								<div class="single-how-works-icon">
+									<i class="flaticon-lightbulb-idea"></i>
+								</div>
+								<section id="list-topics" class="list-topics">
+									<div class="container">
+										<div class="list-topics-content">
+											<ul>
+												<li>
+													<div class="single-list-topics-content">
+														<div class="single-list-topics-icon">
+															<i class="flaticon-restaurant"></i>
+														</div>
+														<h2><a href="#">animation videos</a></h2>
+														<p> </p>
+													</div>
+												</li>
+												<li>
+													<div class="single-list-topics-content">
+														<div class="single-list-topics-icon">
+															<i class="flaticon-travel"></i>
+														</div>
+														<h2><a href="#">quizes</a></h2>
+														<p></p>
+													</div>
+												</li>
+												<li>
+													<div class="single-list-topics-content">
+														<div class="single-list-topics-icon">
+															<i class="flaticon-building"></i>
+														</div>
+														<h2><a href="#">mini games</a></h2>
+													
+													</div>
+												</li>
+							</div>
+						</div>
+						
+			</div><!--/.container-->
+		
+		</section><!--/.works-->
+		<!--works end -->
+
+
+		
+		
+		<!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="footer-menu">
+		           	<div class="row">
+						<div class="col-sm-3">
+							<div class="navbar-header">
+							<a class="navbar-brand" href="index.html">tint<span>tot</span></a>
+							<img src="static\images\logo.png" alt="">
+						</div><!--/.navbar-header-->
+			           	</div>
+			           	<div class="col-sm-9">
+			           		<ul class="footer-menu-item">
+								<li class=" scroll"><a href="#home">home</a></li>
+			                    <li class="scroll"><a href="#works">how it works</a></li>
+			                    <li class="scroll"><a href="#reviews">review</a></li>
+
+			                    
+			                </ul><!--/.nav -->
+			           	</div>
+		           </div>
+				</div>
+			
+					
+				</div><!--/.hm-footer-copyright-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.footer-->
+		<!--footer end-->
+		
+		
+        
+    </body>
+</html>

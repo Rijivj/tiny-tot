@@ -1,0 +1,151 @@
+{% load static%}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static '/css/style.css'%}">
+        <style>
+            body{
+            
+                overflow-x: hidden;
+            }
+            form {
+                align-items: center;
+                max-width: 400px;
+                margin: auto;
+            }
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 12px;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+        .about-section {
+            background-color: #f0f0f0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 56px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 25px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+        </style>
+        
+    </head>
+    <body>
+                <div class="nav">
+                    <img src="{% static 'images/logo.png' %}" alt="hello">
+                <ul id="menu">
+                        <li class=" scroll active"><a href="#home">home</a></li>
+                        <li class="scroll"><a href="{% url 'add_review' %}">review</a></li>
+                        <li class="scroll"><a href="#features">extra activities</a></li>
+                        <li class="scroll"><!-- Assuming you have a user object in the context -->
+                        <li class="scroll"><a href="#"> Profile</a></li>
+                        
+
+                    </ul>
+                </div>
+            </div>
+            <section id="home" class="welcome-hero">
+                <div class="welcome-hero-txt">
+            <h2>welcome to our website <br> <span>tiny tot </span></h2>
+            <p>
+                tips for your kids stay healthy! 
+            </p>
+        </div>
+        <h1>lets goo</h1>
+            </div>
+</section><!--/.welcome-hero-->
+<!--welcome-hero end -->
+      <!--welcome-hero end -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2>About Tiny Tot</h2>
+        <p>
+            Tiny Tot is an online platform designed for children aged pre-kg to 1 years old. We provide engaging and educational
+            activities to promote their well-being and development. Our platform includes animation videos, quizzes, and
+            mini-games tailored for the specific age group, fostering a fun and enriching learning experience.
+        </p>
+    </div>
+</section>
+ 
+ <!--minigames start -->
+ <section id="features" class="minigames" >
+    <div class="container">
+        <div class="section-header">
+            <h1>welcome to explore some interseting features of tiny tot </h1>
+        </div><!--/.section-header-->
+        <div class="blog-content">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-txt" id="quizes">
+                            <h2><a href={% url "animation1" %}>animation</a></h2>
+                            <h4>posted <span>by</span> admin march 2018</h4>
+                            <p>
+                                click on the "animation videos" link and you can see intersting video on the animation video.
+                            </p>
+                        </div>
+                    </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-txt" id="quizes">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="single-blog-item">
+                                    <div class="single-blog-item-txt" id="quizes">
+                                        <a href="{% url 'quiz_view' %}">Take Quiz</a>
+                                        <p>
+                                click on the "quizes" link and you can see intersting quizes on the animation video base.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="single-blog-item">
+                        <div class="single-blog-item-txt" id="minigames">
+                            <h2><a href={% url "minigames1" %}>minigames</a></h2>
+                            <h4>posted <span>by</span> admin march 2018</h4>
+                            <p>
+                                click on the "minigames" link and you can see intersting minigames for your kids.
+                            </p>
+                        </div>
+                    </div>
+        </div>
+    </div><!--/.container-->
+    
+</section><!--/.blog-->
+<!--blog end -->
+
+<script src="" async defer></script>
+</body>
+</html>
